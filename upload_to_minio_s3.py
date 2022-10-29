@@ -34,7 +34,7 @@ def f_upload_files(client, bucket_name, pickup_dir):
                     client.fput_object(bucket_name, file, os.path.join(pickup_dir, file)) # Upload file
                     print("File: "+file+" uploaded")
                 except: # If file upload fails
-                    print("File: " + new_file + " failed to upload")
+                    print("File: " + file + " failed to upload")
         else: # If bucket is not empty
             print("Bucket is not empty")
             for file in os.listdir(pickup_dir): # Loop through all files in pickup directory
